@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">LoginUygulama</string>
+    <string name="giris_metin">Hoşgeldiniz</string>
+    <string name="gir">Giriş Yap</string>
+    <string name="temizle">Temizle</string>
+    <string name="et_ad">Kullanıcı Adı</string>
+    <string name="et_sifre">Şifre</string>
+    <string name="kayit">Kayıt Ol</string>
+    <string name="kayit_tamam">Kaydı Tamamla</string>
+    <string name="vazgec">Vazgeç</string>
+    <string name="kayit_ad">Kullanıcı Adı</string>
+    <string name="kayit_email">E-Mail</string>
+    <string name="kayit_sifre">Şifre</string>
+
+</resources>
