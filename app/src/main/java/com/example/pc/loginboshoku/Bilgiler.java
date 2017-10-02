@@ -1,8 +1,6 @@
 package com.example.pc.loginboshoku;
 
-/**
- * Created by pc on 27.7.2017.
- */
+//Bu kısımda propertie kullanımı yapılmıştır.
 
 public class Bilgiler
 {
