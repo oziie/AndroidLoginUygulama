@@ -19,6 +19,8 @@ public class KayitOl extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kayit_ol);
 
+//EditText ler tanımlanıyor.
+
         kayit_ad = (EditText) findViewById(R.id.kayit_ad);
         kayit_email = (EditText) findViewById(R.id.kayit_email);
         kayit_sifre = (EditText) findViewById(R.id.kayit_sifre);
@@ -32,6 +34,7 @@ public class KayitOl extends AppCompatActivity
         {
             case R.id.kayit_tamamla:
 
+//EditText kısmından alınan girdiler String olarak tutuluyor.
                 String kullaniciadi = kayit_ad.getText().toString();
                 String sifresi = kayit_sifre.getText().toString();
                 String emaili = kayit_email.getText().toString();
@@ -44,17 +47,28 @@ public class KayitOl extends AppCompatActivity
 
                     else
                     {
+                        //Bilgiler türünde bir k1 nesnesi,Bilgiler class nın parametrelerine göre değerleri alıyor.
+                        //DAHA İYİ ANLAMAK İÇİN Bilgiler.java YA BAKARAK NASIL TUTULDUĞUNU GÖREBİLİRSİNİZ.
                         Bilgiler k1 = new Bilgiler(kullaniciadi, sifresi, emaili);
 
+                        //Bir veritabanı bağlantısı açılıyor.
                         Veritabani db = new Veritabani(getApplicationContext());
-
+            
+                        //Veritabanında bulunan KayıtEkle metodunun dönüş tipi long'tur.
+                        //Burada da long türünden bir değişkene KayıtEkle methodunun döndürdüğü değeri veriyoruz.
+                        //Böylece kayıt başarılı mı değil mi bunu anlıyoruz.
+                        //DAHA İYİ ANLAMAK İÇİN BU KISIMDA Veritabani.java YA BAKINIZ!!!
+                        
                         long id = db.KayıtEkle(k1);
 
+                        //Bu değer -1 dönmemeli.Eğer -1 dönüyorsa kayıt başarılı değil ve bir sorun vardır diyoruz.
+                    
                         if (id == -1)
                         {
                             Toast.makeText(KayitOl.this, "HAY AKSİ! Kayıt Hatası Oluştu!!!", Toast.LENGTH_SHORT).show();
                         }
 
+                       //Başarılı olması durumunda buradan 1 dönecektir.
                         else
                         Toast.makeText(getApplicationContext(), "Kayıt işlemi başarılı...", Toast.LENGTH_SHORT).show();
 
@@ -71,6 +85,7 @@ public class KayitOl extends AppCompatActivity
 
             case R.id.vazgec:
 
+        //Vazgeç butonuna basıldığında yazılar temizlenecek ve Ana ekrana geri dönüş olacaktır.
                 kayit_ad.getText().clear();
                 kayit_sifre.getText().clear();
                 kayit_email.getText().clear();
