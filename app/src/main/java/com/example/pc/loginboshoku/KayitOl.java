@@ -19,7 +19,7 @@ public class KayitOl extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kayit_ol);
 
-//EditText ler tanımlanıyor.
+        //EditText ler tanımlanıyor.
 
         kayit_ad = (EditText) findViewById(R.id.kayit_ad);
         kayit_email = (EditText) findViewById(R.id.kayit_email);
@@ -34,7 +34,8 @@ public class KayitOl extends AppCompatActivity
         {
             case R.id.kayit_tamamla:
 
-//EditText kısmından alınan girdiler String olarak tutuluyor.
+                //EditText kısmından alınan girdiler String olarak tutuluyor.
+                
                 String kullaniciadi = kayit_ad.getText().toString();
                 String sifresi = kayit_sifre.getText().toString();
                 String emaili = kayit_email.getText().toString();
@@ -68,7 +69,7 @@ public class KayitOl extends AppCompatActivity
                             Toast.makeText(KayitOl.this, "HAY AKSİ! Kayıt Hatası Oluştu!!!", Toast.LENGTH_SHORT).show();
                         }
 
-                       //Başarılı olması durumunda buradan 1 dönecektir.
+                       //Başarılı olması durumunda buradan o satırın id değeri dönecektir.
                         else
                         Toast.makeText(getApplicationContext(), "Kayıt işlemi başarılı...", Toast.LENGTH_SHORT).show();
 
@@ -93,34 +94,8 @@ public class KayitOl extends AppCompatActivity
                 Intent intentgeri=new Intent(getApplicationContext(),MainActivity.class);
                 startActivity(intentgeri);
 
-
-
                 break;
 
-
         }
-
-
     }
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
