@@ -5,6 +5,8 @@ import android.os.Bundle;
 
 public class Hosgeldiniz extends AppCompatActivity {
 
+    //Bu kısım boş bırakılmıştır.Sadece XML bağlantısı yapılmıştır.
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
