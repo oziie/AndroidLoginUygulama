@@ -74,7 +74,8 @@ public class Veritabani extends SQLiteOpenHelper
     {
 
      SQLiteDatabase db=this.getWritableDatabase();
-
+     
+        //Content value cv'nin değerleri Bilgiler.java kısmındanki propertie kullanımı ile ilgili kısımlara aktarılıyor.
         ContentValues cv=new ContentValues();
         cv.put(SUTUN_KULLANICI_ADI,k1.getIsım());
         cv.put(SUTUN_EMAIL,k1.getEmail());
