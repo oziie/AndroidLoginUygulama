@@ -11,9 +11,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by pc on 22.7.2017.
- */
+
 
 public class Veritabani extends SQLiteOpenHelper
 {
@@ -53,8 +51,6 @@ public class Veritabani extends SQLiteOpenHelper
     {
         db.execSQL(TABLO);
     }
-
-
 
 
     //Tablo güncelleme için.(SQL komutu)
@@ -125,32 +121,4 @@ public  String KaydiKontrolEt(String gelenad)
     return password;
 }
 
-
-
-
-
-
-
-
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
